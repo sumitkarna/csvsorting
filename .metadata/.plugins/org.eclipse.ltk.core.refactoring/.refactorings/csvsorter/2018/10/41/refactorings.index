@@ -1,0 +1,4 @@
+1538920888876	Delete element
+1538920993989	Rename type 'AppTest'
+1538922702148	Rename resource 'resource'
+1538924953303	Extract method 'readFromCsv'

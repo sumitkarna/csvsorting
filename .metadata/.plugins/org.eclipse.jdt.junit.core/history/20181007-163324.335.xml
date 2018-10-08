@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="CsvSortTest" project="csvsorter" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.hm.csvsorter.CsvSortTest" time="0.0">
+    <testcase name="testSorting" classname="com.hm.csvsorter.CsvSortTest" time="0.0"/>
+  </testsuite>
+</testrun>

@@ -1,0 +1,106 @@
+/**
+ * 
+ */
+package com.hm.csvsorter;
+
+import java.io.IOException;
+import java.io.Reader;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+
+import com.opencsv.CSVReader;
+import com.opencsv.CSVReaderBuilder;
+
+/**
+ * @author Sumit Karna
+ *
+ */
+public class CsvSorter {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// if (args.length!= 2 )
+		// throw new IllegalArgumentException("This needs two csv files");
+		// String csv1 = args[0];
+		// String csv2 = args[1];
+
+		String CSV1__PATH = "C://sumit/csvsorterhm/csv1.csv";
+		String CSV2_PATH = "C://sumit/csvsorterhm/csv2.csv";
+		try (Reader reader = Files.newBufferedReader(Paths.get(CSV1__PATH), StandardCharsets.UTF_8);
+				CSVReader csvReader = new CSVReaderBuilder(reader).withSkipLines(1).build();
+
+		) {
+			List<String[]> records = csvReader.readAll();
+			System.out.println(records);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		Integer csv1[][] = { { 1, 2, 3 }, { 2, 3, 2 }, { 3, 4, 1 } };
+		Integer csv2[] = { 6, 4, 3, 2, 1, 5 };
+
+		int index = 1;
+
+		int rows = csv1.length;
+		int cols = csv1[0].length;
+
+		HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
+		HashMap<Integer, Integer> reverseMap = new HashMap<Integer, Integer>();
+		for (int i : csv2) {
+			map.put(csv2[i], i);
+			reverseMap.put(i, csv2[i]);
+		}
+
+		for (int i = 0; i < rows; i++) {
+			csv1[i][index] = map.get(csv1[i][index]);
+		}
+
+		ArrayList<ArrayList<Integer>> al = new ArrayList<ArrayList<Integer>>();
+		for (int i = 0; i < rows; i++) {
+			al.add(new ArrayList<Integer>(Arrays.asList(csv1[i])));
+		}
+
+		IntegerArrayComparator lComparator = new IntegerArrayComparator(index);
+		Collections.sort(al, lComparator);
+
+		for (int i = 0; i < rows; i++) {
+			for (int j = 0; j < cols; j++) {
+				csv1[i][j] = al.get(i).get(j);
+			}
+		}
+
+		for (int i = 0; i < rows; i++) {
+			csv1[i][index] = reverseMap.get(csv1[i][index]);
+		}
+
+		for (int i = 0; i < rows; i++) {
+			System.out.println(Arrays.asList(csv1[i]));
+		}
+
+	}
+
+	public static class IntegerArrayComparator implements Comparator<List<Integer>> {
+
+		int index = 0;
+
+		public IntegerArrayComparator(int index) {
+			this.index = index;
+		}
+
+		public int compare(List<Integer> o1, List<Integer> o2) {
+			return o1.get(index).compareTo(o2.get(index));
+		}
+
+	}
+
+}

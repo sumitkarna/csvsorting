@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;opencsv&apos; to &apos;csvsorter&apos;" description="Rename resource &apos;opencsv&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/opencsv" name="csvsorter" stamp="1538769149482" updateReferences="true"/>
+</session>

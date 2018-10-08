@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="CsvSortTest" project="csvsorter" tests="1" started="1" failures="1" errors="0" ignored="0">
+  <testsuite name="com.hm.csvsorter.CsvSortTest" time="0.0">
+    <testcase name="warning" classname="junit.framework.TestSuite.1" time="0.0">
+      <failure>junit.framework.AssertionFailedError: Exception in constructor: testSorting (java.lang.Error: Unresolved compilation problems: 
+	The import com.hm.csvsorter.CsvSorter cannot be resolved
+	CsvSorter cannot be resolved
+&#13;
+	at com.hm.csvsorter.CsvSortTest.&lt;init&gt;(CsvSortTest.java:12)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)&#13;
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)&#13;
+	at junit.framework.TestSuite.createTest(TestSuite.java:135)&#13;
+	at junit.framework.TestSuite.addTestMethod(TestSuite.java:114)&#13;
+	at junit.framework.TestSuite.&lt;init&gt;(TestSuite.java:75)&#13;
+	at org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestLoader.getTest(JUnit3TestLoader.java:116)&#13;
+	at org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestLoader.loadTests(JUnit3TestLoader.java:59)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:444)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)&#13;
+)&#13;
+	at junit.framework.Assert.fail(Assert.java:47)&#13;
+	at junit.framework.TestSuite$1.runTest(TestSuite.java:263)&#13;
+	at junit.framework.TestCase.runBare(TestCase.java:127)&#13;
+	at junit.framework.TestResult$1.protect(TestResult.java:106)&#13;
+	at junit.framework.TestResult.runProtected(TestResult.java:124)&#13;
+	at junit.framework.TestResult.run(TestResult.java:109)&#13;
+	at junit.framework.TestCase.run(TestCase.java:118)&#13;
+	at junit.framework.TestSuite.runTest(TestSuite.java:208)&#13;
+	at junit.framework.TestSuite.run(TestSuite.java:203)&#13;
+	at org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run(JUnit3TestReference.java:131)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)&#13;
+&#13;
+</failure>
+    </testcase>
+  </testsuite>
+</testrun>
