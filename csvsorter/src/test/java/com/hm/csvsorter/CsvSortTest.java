@@ -9,9 +9,7 @@ import java.nio.file.StandardOpenOption;
 
 import com.opencsv.CSVWriter;
 
-import junit.framework.Test;
 import junit.framework.TestCase;
-import junit.framework.TestSuite;
 
 
 /**
@@ -33,8 +31,8 @@ public class CsvSortTest
     public void testSorting(){
    
     	prepareData();
-    	String[] files = {CSV_1,CSV_2};
-    	CsvSorter.main(files);
+    	String[] args = {CSV_1, "b",CSV_2 ,"d"};
+    	CsvSorter.main(args);
     }
     
     
